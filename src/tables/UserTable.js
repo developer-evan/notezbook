@@ -33,7 +33,7 @@ const UserTable=(props)=>(
                 ))
 ) : (
     <div>
-        <div colSpan={3}>No users</div>
+        <div colSpan={3}>No notes!</div>
     </div>
 )}
         </div>
