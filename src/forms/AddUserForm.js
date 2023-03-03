@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import './AddUser.css';
+import { FaAdd, FaPlus } from 'react-icons/fa';
 
 const AddUserForm = (props) => {
   const initialFormState = { id: null, name: '', username: '' }
@@ -19,28 +21,31 @@ const AddUserForm = (props) => {
         props.addUser(user)
         setUser(initialFormState)
       }}
+      className='form-table'
     >
-      <label>Name</label>
+      <label>Title</label> <br/>
       <input
         type="text"
         name="name"
         value={user.name}
         onChange={handleInputChange}
+        placeholder='Title...'
       />
       <br/>
-      <br/>
-      <label>Username</label>
-      <input
+      
+      <label>Notes</label><br/>
+      <textarea
+      
         type="text"
         name="username"
         value={user.username}
         onChange={handleInputChange}
+        placeholder='Type your notes....'
       />
       <br/>
-      <br/>
-      <button>Add new user</button>
+      <button><FaPlus/> Add note</button>
     </form>
   )
 }
 
-export default AddUserForm
+export default AddUserForm;

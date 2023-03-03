@@ -1,44 +1,42 @@
 import React from "react"
+import './UserTable.css'
+import { FaBeer, FaEdit, FaTrash } from 'react-icons/fa';
 
 const UserTable=(props)=>(
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Username</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
+    <div className="note">
+        
+        <div>
             {props.users.length>0?(
                 props.users.map((user)  => (
-                    <tr key={user.id}>
-                        <td>{user.name}</td>
-                        <td>{user.username}</td>
+                    <div key={user.id} className="note-body">
+                        <h4>{user.name}</h4>
+                        <div>{user.username}</div>
                    
-                {/* //          <tr>
-                // <td>Name</td>
-                // <td>Username Data</td> */}
-                <td>
+                
+                <div>
                     <button
                     onClick={() => {
                         props.editRow(user)
                       }}
-                      className="button muted-button"
-                    >Edit</button>
+                      className="button-edit"
+                    >
+                        <FaEdit/>
+                    </button>
                     <button
                     onClick={()=>props.deleteUser(user.id)}
                     className="button muted-button"
-                    >Delete</button>
-                </td>
-            </tr>
+                    >
+                        <FaTrash/>
+                    </button>
+                </div>
+            </div>
                 ))
 ) : (
-    <tr>
-        <td colSpan={3}>No users</td>
-    </tr>
+    <div>
+        <div colSpan={3}>No users</div>
+    </div>
 )}
-        </tbody>
-    </table>
+        </div>
+    </div>
 )
 export default UserTable

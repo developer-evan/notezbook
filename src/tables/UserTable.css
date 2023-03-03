@@ -1,0 +1,23 @@
+.row {
+    justify-content: space-around;
+}
+
+.note {
+    align-items: center;
+    /* margin: 30px; */
+}
+
+.note-body {
+    margin-bottom: 20px;
+    width: 300px;
+    background: #3070fa;
+    color: aliceblue;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.note-body button {
+    border: none;
+    background: transparent;
+    color: #fff;
+}

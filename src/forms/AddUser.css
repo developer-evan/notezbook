@@ -1,0 +1,32 @@
+.form-table label {
+    color: #0044ff;
+}
+
+.form-table input {
+    height: 30px;
+    border-radius: 5px;
+    padding: 6px;
+    width: 300px;
+    border: 1px solid #0044ff;
+}
+.form-table textarea{
+    width: 300px;
+    border:  2px solid #0044ff;
+    border-radius: 5px;
+}
+
+.form-table button {
+    color: aliceblue;
+    background: #4e7cfc;
+    padding: 6px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.form-table {
+    margin-bottom: 30px;
+}
+.button-muted-button{
+    margin-left: 10px;
+}

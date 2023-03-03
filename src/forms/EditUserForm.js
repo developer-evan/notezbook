@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './AddUser.css';
 
 const EditUserForm = (props) => {
   const [user, setUser] = useState(props.currentUser)
@@ -15,26 +16,28 @@ const EditUserForm = (props) => {
         event.preventDefault()
 
         props.updateUser(user.id, user)
+        
       }}
+      className='form-table'
     >
-      <label>Name</label>
+      <label>Title</label> <br/>
       <input
         type="text"
         name="name"
         value={user.name}
         onChange={handleInputChange}
-      />
-      <label>Username</label>
-      <input
+      /><br/>
+      <label>Notes</label><br/>
+      <textarea
         type="text"
         name="username"
         value={user.username}
         onChange={handleInputChange}
-      />
-      <button>Update user</button>
+      /><br/>
+      <button>Update note</button>
       <button
         onClick={() => props.setEditing(false)}
-        className="button muted-button"
+        className="button-muted-button"
       >
         Cancel
       </button>
